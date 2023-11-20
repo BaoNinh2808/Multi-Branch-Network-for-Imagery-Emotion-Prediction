@@ -1,4 +1,4 @@
-# Proposed Method: Multi-Branch Network (MBN)
+# Multi-Branch Network for Contextual Emotion Prediction in Images
 
 ## Overview
 This repository encompasses the proposed Multi-Branch Network (MBN) detailed in the research paper presented at the Symposium on Information and Communication Technology (SoICT) 2023. The MBN architecture aims to predict emotions in images by leveraging contextual information from body, face, and scene context, merging the predictions into discrete emotions and Valence-Arousal-Dominance (VAD) values.
@@ -39,7 +39,6 @@ The proposed MBN architecture demonstrates its effectiveness on the EMOTIC datas
 For detailed code implementation and experimentation, please refer to the associated codebase.
 
 ## Citation
-If you find this paper or associated code beneficial, please cite our work:
 
 
 Let's continue building the README.md based on the information provided in the paper's proposed method:
