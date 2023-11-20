@@ -1,42 +1,31 @@
 # Multi-Branch Network for Contextual Emotion Prediction in Images
 
 ## Overview
-This repository encompasses the proposed Multi-Branch Network (MBN) detailed in the research paper presented at the Symposium on Information and Communication Technology (SoICT) 2023. The MBN architecture aims to predict emotions in images by leveraging contextual information from body, face, and scene context, merging the predictions into discrete emotions and Valence-Arousal-Dominance (VAD) values.
+This repository hosts the official PyTorch implementation of the Multi-Branch Network (MBN) as presented in the 2023 Symposium on Information and Communication Technology (SoICT). The MBN architecture is designed to discern emotions within images by leveraging combined data from body, face, and scene contexts. Our model excels at predicting emotions across both discrete and continuous scales. In rigorous experiments conducted on the EMOTIC dataset, which comprises extensive images of individuals in diverse, unstructured scenarios annotated with 26 discrete emotion categories and VAD (Valence-Arousal-Dominance) values, our proposed method demonstrates significant superiority over state-of-the-art approaches, achieving 28.4% in mean average precision (mAP) and 0.93 in mean absolute error (MAE).
+
+![Result](https://github.com/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/blob/main/images/result.png)
 
 ## Architecture Overview
-The MBN architecture consists of two primary sections: Feature Extraction Branches and a Fusion Network. The Feature Extraction Branches extract crucial information from body, face, and scene context, while the Fusion Network combines these features for emotion prediction.
+The behind image shows the architecture of our proposed Multi-Branch Network (MBN). The network is divided into two main parts. The first part extracts features from the body, the face, and context of the image, referred to as body image, face image, and context image. It consists of three branches to exploit emotions from subjects and background. We remark that the face region is extracted from the body image. The second part is a fusion network combining the features extracted from the three branches to predict the discrete emotions and VAD values of each person in the image.
+![Architecture of our proposed Multi-Branch Network (MBN) for image emotion prediction](https://github.com/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/blob/main/images/Proposed%20method.jpg)
 
-![Architecture of our proposed Multi-Branch Network (MBN) for image emotion prediction]([url_to_image](https://raw.githubusercontent.com/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/main/images/Proposed%20method.jpg?token=GHSAT0AAAAAACJ6YV2VLZP2LZ6X6ZR56K3GZK3LJ7A))
+Our proposed network consists of three feature extraction branches, utilizing different deep learning models trained on suitable datasets to efficiently make predictions on human and scene images.
 
-### Feature Extraction Branches
-#### Body Feature Extraction Branch
-- Utilizes ResNet-18, ResNet-50, and SwinT architectures with ImageNet pre-trained weights to extract features from body images.
-- Retrained models on the EMOTIC dataset show promising results, achieving an mAP score above 0.33 for gender and age range prediction.
+You can see the picture to know about what backbone you can choose.
 
-#### Context Feature Extraction Branch
-- Employs ResNet-18 and ResNet-50 with Places365 pre-trained weights for scene context feature extraction.
+![backbones](https://github.com/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/blob/main/images/model_options.png)
 
-#### Face Feature Extraction Branch
-- Leverages pre-trained models from FER-2013 dataset by Shangeth and Balmukund for facial expression recognition.
-
-#### Face Extraction and Enhancement
-- Detects faces within body images and performs cropping and resizing.
-- Improves face image quality via denoising and sharpening using OpenCV's filter2D function.
-
-### Fusion Network
-- Adapts the fusion network architecture from previous work.
-- Utilizes two fully-connected layers to predict discrete emotions and VAD values from the extracted features.
-
-#### Connection with Predecessor Models
-- Reconstructs models' connections by creating sequential networks of layers, except for the last layer.
-- Connects the output of the three branches to construct the fusion network's input.
-
-## Experimentation and Results
+## Experiment Result
 The proposed MBN architecture demonstrates its effectiveness on the EMOTIC dataset, surpassing state-of-the-art methods with mAP of 0.2837 and MAE of 0.9256. The fusion of contextual information enhances both discrete and continuous emotion prediction.
 
+The table below show the experiment result on EMOTIC dataset using the combination of 3 feature extraction branches with different backbones.
+
+![experiment result]([https://github.com/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/blob/main/images/model_options.png](https://github.com/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/blob/main/images/experiment%20result.png))
+
+
 ## Contributions
-- Introduction of an innovative MBN architecture leveraging body, face, and scene context for emotion prediction.
-- Experimental validation showcasing the MBN's superior performance over existing methodologies.
+- We present an effective method for human emotion prediction from images. Our method integrates information extracted from various sources, including person’s face and body, and scene context. The combination of facial features and attention to scene contexts helps improve the perfor mance of both discrete and continuous emotion prediction.
+- We provide extensive experiments and analysis on emotion prediction using the continuous VAD scale, which can serve as a baseline for future studies. Experimental results con tribute to the limited existing research on emotion recognition models using the continuous VAD scale.
 
 For detailed code implementation and experimentation, please refer to the associated codebase.
 
