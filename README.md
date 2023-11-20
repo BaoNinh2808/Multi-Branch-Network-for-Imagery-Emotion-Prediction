@@ -6,6 +6,8 @@ This repository encompasses the proposed Multi-Branch Network (MBN) detailed in 
 ## Architecture Overview
 The MBN architecture consists of two primary sections: Feature Extraction Branches and a Fusion Network. The Feature Extraction Branches extract crucial information from body, face, and scene context, while the Fusion Network combines these features for emotion prediction.
 
+![Architecture of our proposed Multi-Branch Network (MBN) for image emotion prediction]([url_to_image](https://raw.githubusercontent.com/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/main/images/Proposed%20method.jpg?token=GHSAT0AAAAAACJ6YV2VLZP2LZ6X6ZR56K3GZK3LJ7A))
+
 ### Feature Extraction Branches
 #### Body Feature Extraction Branch
 - Utilizes ResNet-18, ResNet-50, and SwinT architectures with ImageNet pre-trained weights to extract features from body images.
