@@ -40,6 +40,7 @@ author={Author A, Author B, Author C},
 booktitle={Symposium on Information and Communication Technology},
 year={2023}
 }
+```
 
 ## ACKNOWLEDGMENTS
 
