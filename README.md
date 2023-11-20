@@ -40,4 +40,4 @@ year={2023}
 }
 
 
-For inquiries or further information, please contact [email@example.com](mailto:email@example.com).
+For inquiries or further information, please contact [contact mail](mailto:ltnghia@fit.hcmus.edu.vn).
