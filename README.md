@@ -20,14 +20,15 @@ The proposed MBN architecture demonstrates its effectiveness on the EMOTIC datas
 
 The table below show the experiment result on EMOTIC dataset using the combination of 3 feature extraction branches with different backbones.
 
-![experiment result]([https://github.com/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/blob/main/images/model_options.png](https://github.com/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/blob/main/images/experiment%20result.png))
+![experiment result](https://github.com/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/blob/main/images/experiment%20result.png)
 
+We see that, using powerful backbone result in the better result. The Swin Transformer backbone performed best with a mAP of 0.2837 and a MAE of 0.9256. But the trade off is more time for training because of its large size.
 
 ## Contributions
 - We present an effective method for human emotion prediction from images. Our method integrates information extracted from various sources, including person’s face and body, and scene context. The combination of facial features and attention to scene contexts helps improve the perfor mance of both discrete and continuous emotion prediction.
 - We provide extensive experiments and analysis on emotion prediction using the continuous VAD scale, which can serve as a baseline for future studies. Experimental results con tribute to the limited existing research on emotion recognition models using the continuous VAD scale.
 
-For detailed code implementation and experimentation, please refer to the associated codebase.
+For detailed code implementation and experimentation, please refer to the associated codebase ![ipynb file](https://github.com/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/blob/main/src/Multi-Branch%20Network%20for%20Imagery%20Emotion%20Prediction.ipynb).
 
 ## Citation
 If you find this paper or associated code beneficial, please cite our work:
