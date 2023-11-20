@@ -1,47 +1,99 @@
-# Multi-Branch Network for Imagery Emotion Prediction
+# Proposed Method: Multi-Branch Network (MBN)
 
 ## Overview
-This repository contains the implementation and details of the research paper titled "Multi-Branch Network for Imagery Emotion Prediction," accepted at the Emotion Recognition in Images Symposium 2023. The paper introduces an innovative approach utilizing the Multi-Branch Network (MBN) to predict both discrete emotional categories and Valence-Arousal-Dominance (VAD) values in images by incorporating facial expressions, body language, and scene context.
+This repository encompasses the proposed Multi-Branch Network (MBN) detailed in the research paper presented at the Symposium on Information and Communication Technology (SoICT) 2023. The MBN architecture aims to predict emotions in images by leveraging contextual information from body, face, and scene context, merging the predictions into discrete emotions and Valence-Arousal-Dominance (VAD) values.
 
-## Motivation
-Images serve as powerful repositories of human emotions, yet previous methods predominantly focused on facial expressions, disregarding vital scene contexts that significantly influence emotion recognition accuracy. Additionally, while Valence-Arousal-Dominance (VAD) values offer a more nuanced understanding of continuous emotions, existing approaches lack emphasis on predicting them compared to discrete emotional categories.
+## Architecture Overview
+The MBN architecture consists of two primary sections: Feature Extraction Branches and a Fusion Network. The Feature Extraction Branches extract crucial information from body, face, and scene context, while the Fusion Network combines these features for emotion prediction.
 
-## Key Contributions
-- **Multi-Modal Information Fusion**: The MBN model integrates facial, body, and scene context information to enhance emotion prediction accuracy.
-- **Comprehensive Emotion Prediction**: Simultaneous prediction of discrete emotional categories and VAD values for a holistic understanding of emotions in images.
-- **State-of-the-Art Performance**: Experimental evaluation on the EMOTIC dataset demonstrates a substantial performance improvement, achieving 28.4% in mAP and 0.93 in MAE, surpassing existing methodologies.
+### Feature Extraction Branches
+#### Body Feature Extraction Branch
+- Utilizes ResNet-18, ResNet-50, and SwinT architectures with ImageNet pre-trained weights to extract features from body images.
+- Retrained models on the EMOTIC dataset show promising results, achieving an mAP score above 0.33 for gender and age range prediction.
 
-## Implementation
-The repository includes the complete implementation of the MBN model for imagery emotion prediction.
+#### Context Feature Extraction Branch
+- Employs ResNet-18 and ResNet-50 with Places365 pre-trained weights for scene context feature extraction.
 
-### Features
-- **Multi-Branch Network Architecture**: Implementation of the proposed architecture for effective fusion of diverse contextual information.
-- **Training and Evaluation Scripts**: Code for training the model on the EMOTIC dataset and evaluating performance metrics.
-- **Datasets**: Access to a subset of the EMOTIC dataset for experimentation purposes.
+#### Face Feature Extraction Branch
+- Leverages pre-trained models from FER-2013 dataset by Shangeth and Balmukund for facial expression recognition.
 
-### Requirements
-- Python 3.x
-- TensorFlow or PyTorch
-- NumPy, Pandas, Matplotlib
+#### Face Extraction and Enhancement
+- Detects faces within body images and performs cropping and resizing.
+- Improves face image quality via denoising and sharpening using OpenCV's filter2D function.
 
-### Installation
-1. Clone the repository: `git clone https://github.com/username/MBN-Emotion-Prediction.git`
-2. Install dependencies: `pip install -r requirements.txt`
+### Fusion Network
+- Adapts the fusion network architecture from previous work.
+- Utilizes two fully-connected layers to predict discrete emotions and VAD values from the extracted features.
+
+#### Connection with Predecessor Models
+- Reconstructs models' connections by creating sequential networks of layers, except for the last layer.
+- Connects the output of the three branches to construct the fusion network's input.
 
 ## Experimentation and Results
-The `results` directory contains trained models, evaluation metrics, and visualizations showcasing the performance enhancement achieved by the MBN model on the EMOTIC dataset. Jupyter notebooks for reproducing figures and tables from the paper are also included.
+The proposed MBN architecture demonstrates its effectiveness on the EMOTIC dataset, surpassing state-of-the-art methods with mAP of 0.2837 and MAE of 0.9256. The fusion of contextual information enhances both discrete and continuous emotion prediction.
 
-## Potential Applications
-The findings of this paper underscore the significance of leveraging multiple contextual cues in emotion prediction tasks. The MBN model demonstrates potential applications in various domains, including affective computing, human-computer interaction, social robotics, and beyond.
+## Contributions
+- Introduction of an innovative MBN architecture leveraging body, face, and scene context for emotion prediction.
+- Experimental validation showcasing the MBN's superior performance over existing methodologies.
+
+For detailed code implementation and experimentation, please refer to the associated codebase.
 
 ## Citation
-If you find this paper or associated code useful, kindly consider citing our work:
+If you find this paper or associated code beneficial, please cite our work:
+
+
+Let's continue building the README.md based on the information provided in the paper's proposed method:
+
+markdown
+Copy code
+# Proposed Method: Multi-Branch Network (MBN)
+
+## Overview
+This repository encompasses the proposed Multi-Branch Network (MBN) detailed in the research paper presented at the Symposium on Information and Communication Technology (SoICT) 2023. The MBN architecture aims to predict emotions in images by leveraging contextual information from body, face, and scene context, merging the predictions into discrete emotions and Valence-Arousal-Dominance (VAD) values.
+
+## Architecture Overview
+The MBN architecture consists of two primary sections: Feature Extraction Branches and a Fusion Network. The Feature Extraction Branches extract crucial information from body, face, and scene context, while the Fusion Network combines these features for emotion prediction.
+
+### Feature Extraction Branches
+#### Body Feature Extraction Branch
+- Utilizes ResNet-18, ResNet-50, and SwinT architectures with ImageNet pre-trained weights to extract features from body images.
+- Retrained models on the EMOTIC dataset show promising results, achieving an mAP score above 0.33 for gender and age range prediction.
+
+#### Context Feature Extraction Branch
+- Employs ResNet-18 and ResNet-50 with Places365 pre-trained weights for scene context feature extraction.
+
+#### Face Feature Extraction Branch
+- Leverages pre-trained models from FER-2013 dataset by Shangeth and Balmukund for facial expression recognition.
+
+#### Face Extraction and Enhancement
+- Detects faces within body images and performs cropping and resizing.
+- Improves face image quality via denoising and sharpening using OpenCV's filter2D function.
+
+### Fusion Network
+- Adapts the fusion network architecture from previous work.
+- Utilizes two fully-connected layers to predict discrete emotions and VAD values from the extracted features.
+
+#### Connection with Predecessor Models
+- Reconstructs models' connections by creating sequential networks of layers, except for the last layer.
+- Connects the output of the three branches to construct the fusion network's input.
+
+## Experimentation and Results
+The proposed MBN architecture demonstrates its effectiveness on the EMOTIC dataset, surpassing state-of-the-art methods with mAP of 0.2837 and MAE of 0.9256. The fusion of contextual information enhances both discrete and continuous emotion prediction.
+
+## Contributions
+- Introduction of an innovative MBN architecture leveraging body, face, and scene context for emotion prediction.
+- Experimental validation showcasing the MBN's superior performance over existing methodologies.
+
+For detailed code implementation and experimentation, please refer to the associated codebase.
+
+## Citation
+If you find this paper or associated code beneficial, please cite our work:
 @inproceedings{author2023multi-branch,
-title={Multi-Branch Network for Imagery Emotion Prediction},
+title={Proposed Multi-Branch Network for Emotion Prediction in Images},
 author={Author A, Author B, Author C},
-booktitle={Emotion Recognition in Images Symposium},
+booktitle={Symposium on Information and Communication Technology},
 year={2023}
 }
 
-For inquiries or further information, please reach out to [email@example.com](mailto:email@example.com).
 
+For inquiries or further information, please contact [email@example.com](mailto:email@example.com).
