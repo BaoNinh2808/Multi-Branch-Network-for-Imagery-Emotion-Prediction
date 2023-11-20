@@ -32,6 +32,8 @@ For detailed code implementation and experimentation, please refer to the associ
 
 ## Citation
 If you find this paper or associated code beneficial, please cite our work:
+
+```bibtex
 @inproceedings{author2023multi-branch,
 title={Proposed Multi-Branch Network for Emotion Prediction in Images},
 author={Author A, Author B, Author C},
@@ -39,5 +41,8 @@ booktitle={Symposium on Information and Communication Technology},
 year={2023}
 }
 
+## ACKNOWLEDGMENTS
 
-For inquiries or further information, please contact [contact mail](mailto:ltnghia@fit.hcmus.edu.vn).
+This research is supported by research funding from Faculty of Information Technology, University of Science, Vietnam National University - Ho Chi Minh City. We would like to express our gratitude to Dr. Minh-Triet Tran for his valuable suggestions and support that greatly contributed to the completion of this research.
+
+For inquiries or further information, please contact [mail](mailto:ltnghia@fit.hcmus.edu.vn).
