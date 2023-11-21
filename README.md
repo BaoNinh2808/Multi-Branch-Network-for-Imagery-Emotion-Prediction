@@ -6,7 +6,7 @@ This repository hosts the official PyTorch implementation of the Multi-Branch Ne
 ![Result](https://github.com/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/blob/main/images/result.png)
 
 ## Dataset
-We use EMOTIC dataset in our experienment. EMOTIC dataset has supplied us the ***body image*** and ***context image***, but not supplied ***face image*** yet. So we must extract ***face image*** from ***body image*** and use some processing method to enhance their quality.We have present the way we extract and enhance ***face image*** quality in my paper, you can use it as a hint for extracting ***face image*** to use in your trainning and testing. 
+We use EMOTIC dataset in our experienment. EMOTIC dataset has supplied us the ***body image*** and ***context image***, but not supplied ***face image*** yet. So we must extract ***face image*** from ***body image*** of EMOTIC dataset and use some processing method to enhance their quality.We have present the way we extract and enhance ***face image*** quality in my paper, you can use it as a hint for extracting ***face image*** to use in your trainning and testing. 
 
 And of course, I will give you ***face image*** that we have extracted and used. You can go to this GG drive link to download it [Face Image Dataset](https://drive.google.com/drive/folders/1XvRbQG9W32xDP4olh53qvoAJWepVsrro?usp=sharing)
 
