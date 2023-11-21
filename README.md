@@ -35,7 +35,7 @@ Then, you need to convert annotations from mat object to csv files and preproces
 * data_dir: Path of the directory containing the emotic and annotations folder as described in the above data directory structure.
 * generate_npy: Argument to specify to generate npy files (later used for training and testing) along with CSV files. If not passed only CSV files are generated.
 
-Finally, combination with our ***face image*** you can download from my [GG drive](https://drive.google.com/drive/folders/1XvRbQG9W32xDP4olh53qvoAJWepVsrro?usp=sharing), you already have the complete dataset to use in our [Google Colab](https://colab.research.google.com/drive/1BDF0R2LfGzSnQMLvq0_x7pxztmumletN?usp=sharing). [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/drive/folders/1XvRbQG9W32xDP4olh53qvoAJWepVsrro?usp=sharing)
+Finally, combination with our ***face image*** you can download from my [GG drive](https://drive.google.com/drive/folders/1XvRbQG9W32xDP4olh53qvoAJWepVsrro?usp=sharing), you already have the complete dataset to use in our [Google Colab](https://colab.research.google.com/drive/1BDF0R2LfGzSnQMLvq0_x7pxztmumletN?usp=sharing). [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1BDF0R2LfGzSnQMLvq0_x7pxztmumletN?usp=sharing)
 
 
 ## Architecture Overview
