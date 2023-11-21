@@ -5,6 +5,14 @@ This repository hosts the official PyTorch implementation of the Multi-Branch Ne
 
 ![Result](https://github.com/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/blob/main/images/result.png)
 
+## Dataset
+We use EMOTIC dataset in our experienment. EMOTIC dataset has supplied us the ***body image*** and ***context image***, but not supplied ***face image*** yet. So we must extract ***face image*** from ***body image*** and use some processing method to enhance their quality.We have present the way we extract and enhance ***face image*** quality in my paper, you can use it as a hint for extracting ***face image*** to use in your trainning and testing. 
+
+And of course, I will give you ***face image*** that we have extracted and used. You can go to this GG drive link to download it ![link](https://drive.google.com/drive/folders/1XvRbQG9W32xDP4olh53qvoAJWepVsrro?usp=sharing)
+
+
+
+
 ## Architecture Overview
 The behind image shows the architecture of our proposed Multi-Branch Network (MBN). The network is divided into two main parts. The first part extracts features from the body, the face, and context of the image, referred to as body image, face image, and context image. It consists of three branches to exploit emotions from subjects and background. We remark that the face region is extracted from the body image. The second part is a fusion network combining the features extracted from the three branches to predict the discrete emotions and VAD values of each person in the image.
 ![Architecture of our proposed Multi-Branch Network (MBN) for image emotion prediction](https://github.com/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/blob/main/images/Proposed%20method.jpg)
