@@ -80,3 +80,6 @@ year={2023}
 This research is supported by research funding from Faculty of Information Technology, University of Science, Vietnam National University - Ho Chi Minh City. We would like to express our gratitude to Dr. Minh-Triet Tran for his valuable suggestions and support that greatly contributed to the completion of this research.
 
 For inquiries or further information, please contact [mail](mailto:ltnghia@fit.hcmus.edu.vn).
+
+## LICENSE
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/). The use of this code is for academic purposes only.
