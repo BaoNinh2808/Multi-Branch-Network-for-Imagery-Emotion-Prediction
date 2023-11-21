@@ -35,7 +35,8 @@ Then, you need to convert annotations from mat object to csv files and preproces
 * data_dir: Path of the directory containing the emotic and annotations folder as described in the above data directory structure.
 * generate_npy: Argument to specify to generate npy files (later used for training and testing) along with CSV files. If not passed only CSV files are generated.
 
-Finally, combination with our ***face image*** you can download from my [GG drive](https://drive.google.com/drive/folders/1XvRbQG9W32xDP4olh53qvoAJWepVsrro?usp=sharing), you already have the complete dataset to use in our [Google Colab](https://colab.research.google.com/drive/1BDF0R2LfGzSnQMLvq0_x7pxztmumletN?usp=sharing). 
+Finally, combination with our ***face image*** you can download from my [GG drive](https://drive.google.com/drive/folders/1XvRbQG9W32xDP4olh53qvoAJWepVsrro?usp=sharing), you already have the complete dataset to use in our [Google Colab](https://colab.research.google.com/drive/1BDF0R2LfGzSnQMLvq0_x7pxztmumletN?usp=sharing). [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/drive/folders/1XvRbQG9W32xDP4olh53qvoAJWepVsrro?usp=sharing)
+
 
 ## Architecture Overview
 The behind image shows the architecture of our proposed Multi-Branch Network (MBN). The network is divided into two main parts. The first part extracts features from the body, the face, and context of the image, referred to as body image, face image, and context image. It consists of three branches to exploit emotions from subjects and background. We remark that the face region is extracted from the body image. The second part is a fusion network combining the features extracted from the three branches to predict the discrete emotions and VAD values of each person in the image.
