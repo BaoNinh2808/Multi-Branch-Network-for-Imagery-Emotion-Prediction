@@ -35,8 +35,8 @@ If you find this paper or associated code beneficial, please cite our work:
 
 ```bibtex
 @inproceedings{author2023multi-branch,
-title={Proposed Multi-Branch Network for Emotion Prediction in Images},
-author={Author A, Author B, Author C},
+title={Multi-Branch Network for Imagery Emotion Prediction},
+author={Quoc-Bao Ninh, Hai-Chan Nguyen, Triet Huynh, Trung-Nghia Le},
 booktitle={Symposium on Information and Communication Technology},
 year={2023}
 }
