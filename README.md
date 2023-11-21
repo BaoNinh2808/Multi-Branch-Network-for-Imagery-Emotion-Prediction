@@ -10,8 +10,30 @@ We use EMOTIC dataset in our experienment. EMOTIC dataset has supplied us the **
 
 And of course, I will give you ***face image*** that we have extracted and used. You can go to this GG drive link to download it [Face Image Dataset](https://drive.google.com/drive/folders/1XvRbQG9W32xDP4olh53qvoAJWepVsrro?usp=sharing)
 
+About EMOTIC Dataset, we appologize for not able to give you it directly. The Emotic dataset can be used only for non-commercial research and education purposes. Please, fill out the following form to request access to the dataset and the corresponding annotations.
+[Access Request for EMOTIC](https://docs.google.com/forms/d/e/1FAIpQLScXwxhEZu7RpHwgiRqVfb09GzHSSyIm64hJQMgHSLm75ltsFQ/viewform) 
 
+### Preprocessing Dataset (IMPORTANT) 
+You must preprocessing Dataset before using it in our code for trainning and testing model.
 
+After download the Emotic dataset & annotations, preparing the directory following the below structure:
+```plaintext
+├── ...
+│   ├── emotic
+│   |    ├── ade20k
+│   |    ├── emodb_small
+│   |    ├── framesdb
+│   |    ├── mscoco 
+│   ├── Annotations
+│   |    ├── Annotations.mat
+```
+
+Then, you need to convert annotations from mat object to csv files and preprocess the data:
+```plaintext
+> python mat2py.py --data_dir proj/data/emotic19 --generate_npy
+```
+* data_dir: Path of the directory containing the emotic and annotations folder as described in the above data directory structure.
+* generate_npy: Argument to specify to generate npy files (later used for training and testing) along with CSV files. If not passed only CSV files are generated.
 
 ## Architecture Overview
 The behind image shows the architecture of our proposed Multi-Branch Network (MBN). The network is divided into two main parts. The first part extracts features from the body, the face, and context of the image, referred to as body image, face image, and context image. It consists of three branches to exploit emotions from subjects and background. We remark that the face region is extracted from the body image. The second part is a fusion network combining the features extracted from the three branches to predict the discrete emotions and VAD values of each person in the image.
