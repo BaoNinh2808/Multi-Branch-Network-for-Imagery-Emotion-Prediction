@@ -1,5 +1,7 @@
 # Multi-Branch Network for Contextual Emotion Prediction in Images
 
+[[`ArXiv Paper`](https://arxiv.org/abs/2312.07500)]
+
 ## Overview
 This repository hosts the official PyTorch implementation of the Multi-Branch Network (MBN) as presented in the 2023 Symposium on Information and Communication Technology (SoICT). The MBN architecture is designed to discern emotions within images by leveraging combined data from body, face, and scene contexts. Our model excels at predicting emotions across both discrete and continuous scales. In rigorous experiments conducted on the EMOTIC dataset, which comprises extensive images of individuals in diverse, unstructured scenarios annotated with 26 discrete emotion categories and VAD (Valence-Arousal-Dominance) values, our proposed method demonstrates significant superiority over state-of-the-art approaches, achieving 28.4% in mean average precision (mAP) and 0.93 in mean absolute error (MAE).
 
