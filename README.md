@@ -37,7 +37,7 @@ Then, you need to convert annotations from mat object to csv files and preproces
 * data_dir: Path of the directory containing the emotic and annotations folder as described in the above data directory structure.
 * generate_npy: Argument to specify to generate npy files (later used for training and testing) along with CSV files. If not passed only CSV files are generated.
 
-Finally, combination with our ***face image*** you can download from my github [face-dataset](./face-dataset/), you already have the complete dataset to use in our [notebook](./notebook/). [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/notebook/Multi_Branch_Network_for_Imagery_Emotion_Prediction.ipynb)
+Finally, combination with our ***face image*** you can download from my github [face-dataset](./face-dataset/), you already have the complete dataset to use in our [notebook](./notebook/). [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/blob/main/notebook/Multi_Branch_Network_for_Imagery_Emotion_Prediction.ipynb)
 
 
 ## Architecture Overview
