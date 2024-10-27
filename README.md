@@ -10,7 +10,7 @@ This repository hosts the official PyTorch implementation of the Multi-Branch Ne
 ## Dataset
 We use EMOTIC dataset in our experienment. EMOTIC dataset has supplied us the ***body image*** and ***context image***, but not supplied ***face image*** yet. So we must extract ***face image*** from ***body image*** of EMOTIC dataset and use some processing method to enhance their quality.We have present the way we extract and enhance ***face image*** quality in my paper, you can use it as a hint for extracting ***face image*** to use in your trainning and testing. 
 
-And of course, I will give you ***face image*** that we have extracted and used. You can go to this GG drive link to download it [Face Image Dataset](https://drive.google.com/drive/folders/1XvRbQG9W32xDP4olh53qvoAJWepVsrro?usp=sharing)
+And of course, I will give you ***face image*** that we have extracted and used. We put it in `face-dataset` folder, you can download it [Face Image Dataset](./face-dataset/)
 
 About EMOTIC Dataset, we appologize for not able to give you it directly. The Emotic dataset can be used only for non-commercial research and education purposes. Please, fill out the following form to request access to the dataset and the corresponding annotations.
 [Access Request for EMOTIC](https://docs.google.com/forms/d/e/1FAIpQLScXwxhEZu7RpHwgiRqVfb09GzHSSyIm64hJQMgHSLm75ltsFQ/viewform) 
@@ -37,7 +37,7 @@ Then, you need to convert annotations from mat object to csv files and preproces
 * data_dir: Path of the directory containing the emotic and annotations folder as described in the above data directory structure.
 * generate_npy: Argument to specify to generate npy files (later used for training and testing) along with CSV files. If not passed only CSV files are generated.
 
-Finally, combination with our ***face image*** you can download from my [GG drive](https://drive.google.com/drive/folders/1XvRbQG9W32xDP4olh53qvoAJWepVsrro?usp=sharing), you already have the complete dataset to use in our [Google Colab](https://colab.research.google.com/drive/1BDF0R2LfGzSnQMLvq0_x7pxztmumletN?usp=sharing). [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1BDF0R2LfGzSnQMLvq0_x7pxztmumletN?usp=sharing)
+Finally, combination with our ***face image*** you can download from my github [face-dataset](./face-dataset/), you already have the complete dataset to use in our [notebook](./notebook/). [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/BaoNinh2808/Multi-Branch-Network-for-Imagery-Emotion-Prediction/notebook/Multi_Branch_Network_for_Imagery_Emotion_Prediction.ipynb)
 
 
 ## Architecture Overview
